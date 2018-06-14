@@ -1,1 +1,1 @@
-Abstracciones para el manejo de hilos.
+* Abstracciones para el manejo de hilos.

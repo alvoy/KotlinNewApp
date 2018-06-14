@@ -1,1 +1,1 @@
-Contiene todas las clases de modelo relacionadas a eventos.
+* Contiene clases de tipo Base para llevar a cabo el comportamiento entre implementaciones (BasePresenter, BaseViewModel).

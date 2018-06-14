@@ -1,1 +1,1 @@
-Implementación para el manejo de Threading definido en la capa de dominio.
+* Implementación para el manejo de Threading definido en la capa de dominio.
