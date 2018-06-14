@@ -1,0 +1,1 @@
+Contiene todas las clases de modelo relacionadas a eventos.

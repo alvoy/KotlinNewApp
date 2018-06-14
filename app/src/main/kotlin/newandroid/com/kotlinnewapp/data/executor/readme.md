@@ -1,0 +1,1 @@
+Implementación para el manejo de Threading definido en la capa de dominio.

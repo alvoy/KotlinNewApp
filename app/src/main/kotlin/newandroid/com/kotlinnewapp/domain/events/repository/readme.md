@@ -1,1 +1,1 @@
-Contiene las interfaces del caso de uso de eventos que se usa para manejar operaciones relacionadas a los modelos del paquete (el capa de datos implementa esta interface).
+Contiene las interfaces del caso de uso de eventos que se usa para manejar operaciones relacionadas a los modelos del paquete (la capa de datos implementa esta interface).
