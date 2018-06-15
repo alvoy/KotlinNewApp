@@ -1,1 +1,1 @@
-Contiene todas las clases de modelo relacionadas a eventos.
+* Contiene las clases de Widget usadas transversalmente en la capa vista.
