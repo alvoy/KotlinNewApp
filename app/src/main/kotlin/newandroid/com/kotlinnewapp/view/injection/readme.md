@@ -1,1 +1,1 @@
-* Contiene la configuración de nuestra Dependency Injection (inyección o inversión de dependencias)
+* Contiene la configuración de nuestra Dependency Injection (inyección/inversión de dependencias)
