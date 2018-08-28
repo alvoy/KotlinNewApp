@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_program"
+        android:icon="@drawable/programa"
+        android:title="Programa"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/navigation_speakers"
+        android:icon="@drawable/ponentes"
+        android:title="Ponentes"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/navigation_favorites"
+        android:icon="@drawable/favoritos"
+        android:title="Favoritos"
+        app:showAsAction="always|withText"/>
+
+    <item
+        android:id="@+id/navigation_sponsors"
+        android:icon="@drawable/patrocinadores"
+        android:title="Patrocinadores"
+        app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/navigation_more"
+        android:icon="@drawable/otros"
+        android:title="Otros"
+        app:showAsAction="always|withText"/>
+
+
+
+</menu>
