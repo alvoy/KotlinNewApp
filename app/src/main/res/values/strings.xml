@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">KotlinNewApp</string>
+    <string name="app_name">SMS 2018</string>
+    <string name="programa">Programa</string>
+    <string name="search">Buscar</string>
+    <string name="settings">Configuración</string>
+
+
 </resources>
