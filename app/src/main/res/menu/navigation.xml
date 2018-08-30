@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/navigation_program"
+        android:id="@+id/navigation_home"
         android:icon="@drawable/programa"
         android:title="Programa"
         app:showAsAction="always|withText"/>

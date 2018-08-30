@@ -5,11 +5,19 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import kotlinx.android.synthetic.main.activity_main.*
+import android.support.v4.app.Fragment
+import newandroid.com.kotlinnewapp.view.*
+
 
 
 class MainActivity : AppCompatActivity() {
 
 
+    val homeFragment = HomeFragment()
+    val speakersFragment = SpeakersFragment()
+    val favoritesFragment = FavoritesFragment()
+    val sponsorsFragment = SponsorsFragment()
+    val moreFragment = MoreFragment ()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -23,7 +31,25 @@ class MainActivity : AppCompatActivity() {
         //val bottomNavigation: BottomNavigationView = findViewById(R.id.navigationView)
         BottomNavigationViewHelper.disableShiftMode(navigationView)
 
+        navigationView.setOnNavigationItemSelectedListener {
 
+            when(it.itemId){
+
+                R.id.navigation_home -> replaceFragment(homeFragment)
+                R.id.navigation_speakers -> replaceFragment(speakersFragment)
+                R.id.navigation_favorites -> replaceFragment(favoritesFragment)
+                R.id.navigation_sponsors -> replaceFragment(sponsorsFragment)
+                R.id.navigation_more -> replaceFragment(moreFragment)
+            }
+            true
+        }
+        navigationView.selectedItemId = R.id.navigation_home
+
+
+    }
+
+    private fun replaceFragment(fragment: Fragment){
+        supportFragmentManager.beginTransaction().replace(R.id.container, fragment).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
