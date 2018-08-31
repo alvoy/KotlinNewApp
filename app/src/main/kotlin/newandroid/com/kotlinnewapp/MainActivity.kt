@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         setTitle("")
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-        toolbar_title.text = getString(R.string.programa)
+        //toolbar_title.text = getString(R.string.programa)
         toolbar_title.setTextColor(Color.WHITE)
 
         //val bottomNavigation: BottomNavigationView = findViewById(R.id.navigationView)
@@ -35,11 +35,26 @@ class MainActivity : AppCompatActivity() {
 
             when(it.itemId){
 
-                R.id.navigation_home -> replaceFragment(homeFragment)
-                R.id.navigation_speakers -> replaceFragment(speakersFragment)
-                R.id.navigation_favorites -> replaceFragment(favoritesFragment)
-                R.id.navigation_sponsors -> replaceFragment(sponsorsFragment)
-                R.id.navigation_more -> replaceFragment(moreFragment)
+                R.id.navigation_home -> {
+                    replaceFragment(homeFragment)
+                    toolbar_title.text = "Programa"
+                }
+                R.id.navigation_speakers -> {
+                    replaceFragment(speakersFragment)
+                    toolbar_title.text = "Ponentes"
+                }
+                R.id.navigation_favorites -> {
+                    replaceFragment(favoritesFragment)
+                    toolbar_title.text = "Favoritos"
+                }
+                R.id.navigation_sponsors -> {
+                    replaceFragment(favoritesFragment)
+                    toolbar_title.text = "Patrocinadores"
+                }
+                R.id.navigation_more -> {
+                    replaceFragment(favoritesFragment)
+                    toolbar_title.text = "Más"
+                }
             }
             true
         }
