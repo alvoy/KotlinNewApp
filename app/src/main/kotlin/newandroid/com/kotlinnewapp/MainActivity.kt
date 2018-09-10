@@ -6,11 +6,12 @@ import android.os.Bundle
 import android.view.Menu
 import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v4.app.Fragment
+import newandroid.com.kotlinnewapp.presentation.MainPresenter
 import newandroid.com.kotlinnewapp.view.*
 
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), MainView {
 
 
     val homeFragment = HomeFragment()
@@ -19,10 +20,12 @@ class MainActivity : AppCompatActivity() {
     val sponsorsFragment = SponsorsFragment()
     val moreFragment = MoreFragment ()
 
+    private val presenter = MainPresenter(this)
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setTitle("")
+
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         //toolbar_title.text = getString(R.string.programa)
@@ -37,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.navigation_home -> {
                     replaceFragment(homeFragment)
-                    toolbar_title.text = "Programa"
+                    presenter.setToolbarText()
                 }
                 R.id.navigation_speakers -> {
                     replaceFragment(speakersFragment)
@@ -61,6 +64,24 @@ class MainActivity : AppCompatActivity() {
         navigationView.selectedItemId = R.id.navigation_home
 
 
+    }
+
+    override fun onResume() {
+        super.onResume()
+        presenter.onResume()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.onDestroy()
+    }
+
+    override fun setToolbarText(text:String){
+            toolbar_title.text = text
+    }
+
+    override fun setMainTitle(text:String){
+            setTitle(text)
     }
 
     private fun replaceFragment(fragment: Fragment){
